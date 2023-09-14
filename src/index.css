@@ -49,6 +49,7 @@ footer {
 
 main {
   flex-grow: 1;
+  padding: 0 8rem;
 }
 
 header img {
@@ -58,6 +59,7 @@ header img {
 
 nav ul {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
   justify-content: center;
