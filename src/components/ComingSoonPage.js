@@ -1,8 +1,13 @@
 
 function ComingSoonPage() {
     return (
-        <div>
-            ComingSoonPage
+        <div
+            style={{
+                display: 'flex', justifyContent: 'center',
+                alignItems: 'center', minHeight: '400px',
+            }}
+        >
+            <h1>Coming Soon!</h1>
         </div>
     );
 }
