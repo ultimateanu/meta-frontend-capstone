@@ -19,6 +19,10 @@ body {
   --highlight-color-light: #333333;
 }
 
+body {
+  font-family: 'Karla', sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -26,12 +30,6 @@ h4,
 h5,
 h6 {
   font-family: 'Markazi Text', serif;
-  border: 4px solid blue;
-}
-
-p,
-span {
-  font-family: 'Karla', sans-serif;
 }
 
 
