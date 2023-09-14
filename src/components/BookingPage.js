@@ -1,13 +1,12 @@
 import { useState } from "react";
 
 
-function BookingForm() {
-    const availableTimes = ["5:00pm", "6:00pm", "7:00pm", "8:00pm", "9:00pm", "10:00pm"]
+function BookingForm(props) {
     const availableOccasions = ["-", "Birthday", "Anniversary"]
 
     // State
     const [chosenDate, setChosenDate] = useState((new Date()).toISOString().split('T')[0]);
-    const [chosenTime, setChosenTime] = useState(availableTimes[0]);
+    const [chosenTime, setChosenTime] = useState(props.availableTimes[0]);
     const [numGuests, setNumGuests] = useState(4);
     const [occasion, setOccasion] = useState(availableOccasions[0]);
 
@@ -19,7 +18,7 @@ function BookingForm() {
 
             <label htmlFor="res-time">Choose time</label>
             <select value={chosenTime} onChange={e => setChosenTime(e.target.value)} id="res-time ">
-                {availableTimes.map(t => <option>{t}</option>)}
+                {props.availableTimes.map(t => <option>{t}</option>)}
             </select>
 
             <label htmlFor="guests">Number of guests</label>
@@ -35,11 +34,13 @@ function BookingForm() {
     );
 }
 
-function BookingPage() {
+function BookingPage(props) {
     return (
         <div>
             <h1>Make a reservation</h1>
-            <BookingForm></BookingForm>
+            <BookingForm
+                availableTimes={props.availableTimes}
+                setAvailableTimes={props.setAvailableTimes} />
         </div>
     );
 }
