@@ -1,7 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text&display=swap');
 
 
+/* CSS reset */
+body {
+  margin: 0;
+}
+
+
 /* Brand styles */
+:root {
+  --primary-color-green: #495E57;
+  --primary-color-yellow: #f4ce14;
+
+  --secondary-color-pink: #ee9972;
+  --secondary-color-tan: #fbdabb;
+
+  --highlight-color-dark: #edefee;
+  --highlight-color-light: #333333;
+}
+
 h1,
 h2,
 h3,
