@@ -2,7 +2,7 @@
 
 
 /* CSS reset */
-body {
+* {
   margin: 0;
 }
 
@@ -21,6 +21,14 @@ body {
 
 body {
   font-family: 'Karla', sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 h1,
@@ -81,4 +89,67 @@ nav a:visited {
 
 nav a:hover {
   text-decoration: underline;
+}
+
+#banner {
+  background-color: var(--primary-color-green);
+  padding: 4rem 8rem;
+  margin: 0 -8rem;
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#banner h1 {
+  color: var(--primary-color-yellow);
+  margin: 0;
+}
+
+#banner h2 {
+  color: whitesmoke;
+  margin: 0;
+}
+
+#banner p {
+  font-size: 1.2rem;
+  max-width: 90%;
+}
+
+#banner img {
+  max-height: 200px;
+  border-radius: 1rem;
+}
+
+#specials {
+  display: flex;
+  gap: 1rem;
+  padding: 3rem 0;
+  flex-wrap: wrap;
+}
+
+#specials .card {
+  flex: 1 1 100px;
+  border-radius: 1rem;
+  background-color: var(--highlight-color-dark);
+  padding: 1rem;
+  font-size: 1.3rem;
+  min-width: 200px;
+}
+
+#specials .card .top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#specials .card .top-row span {
+  font-size: 1rem;
+  color: var(--secondary-color-pink);
+}
+
+
+#specials .card .description {
+  font-size: 1rem;
+  margin: 1rem 0;
 }
