@@ -7,7 +7,7 @@ import { Routes, Route } from "react-router-dom";
 // On weekends, show more time options!
 const updateTimes = (state, action) => {
     const date = new Date(action);
-    const dayOfWeek = date.getUTCDay();
+    const dayOfWeek = date.getDay();
     const isWeekendOrFriday = (dayOfWeek === 0 || dayOfWeek === 5 || dayOfWeek === 6);
     return isWeekendOrFriday ?
         ["5:00pm", "6:00pm", "7:00pm", "8:00pm", "9:00pm", "10:00pm", "11:00pm"] :
