@@ -14,9 +14,9 @@ const updateTimes = (state, action) => {
         ["6:00pm", "7:00pm", "8:00pm", "9:00pm"];
 }
 
-const initializeTimes = () => {
-    return ["6:00pm", "7:00pm", "8:00pm", "9:00pm"];
-};
+// const initializeTimes = () => {
+//     return ["6:00pm", "7:00pm", "8:00pm", "9:00pm"];
+// };
 
 function Main() {
     const initialTimes = updateTimes(null, (new Date()).toISOString().split('T')[0]);
