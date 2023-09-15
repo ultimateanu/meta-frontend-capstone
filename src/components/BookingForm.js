@@ -22,12 +22,11 @@ function BookingForm(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('submitting');
-        alert('You reservation in confirmed!')
+        alert(`You reservation for party of ${numGuests} on ${chosenDate} at ${chosenTime} in confirmed!`);
     };
 
     return (
-        <form onSubmit={handleSubmit} action="#" aria-label="Make a reservation" style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
+        <form onSubmit={handleSubmit} action="#" aria-label="Make a reservation" style={{ display: "grid", maxWidth: "200px" }}>
             <label htmlFor="res-date">Choose date</label>
             <input value={chosenDate} onChange={handleDateChange}
                 type="date" min={todayDate} id="res-date"></input>
@@ -45,7 +44,7 @@ function BookingForm(props) {
             <select value={occasion} onChange={e => setOccasion(e.target.value)} id="occasion">
                 {availableOccasions.map(t => <option key={t}>{t}</option>)}
             </select>
-            <input aria-label="On Click" type="submit" value="Make Your reservation"></input>
+            <input id="submit" aria-label="On Click" type="submit" value="Make Your reservation"></input>
         </form>
     );
 }
