@@ -20,8 +20,14 @@ function BookingForm(props) {
         props.updateAvailableTimes(e.target.value);
     };
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('submitting');
+        alert('You reservation in confirmed!')
+    };
+
     return (
-        <form aria-label="Make a reservation" style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
+        <form onSubmit={handleSubmit} action="#" aria-label="Make a reservation" style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
             <label htmlFor="res-date">Choose date</label>
             <input value={chosenDate} onChange={handleDateChange}
                 type="date" min={todayDate} id="res-date"></input>
