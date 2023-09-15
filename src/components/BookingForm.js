@@ -39,7 +39,7 @@ function BookingForm(props) {
             <select value={occasion} onChange={e => setOccasion(e.target.value)} id="occasion">
                 {availableOccasions.map(t => <option key={t}>{t}</option>)}
             </select>
-            <input type="submit" value="Make Your reservation"></input>
+            <input aria-label="On Click" type="submit" value="Make Your reservation"></input>
         </form>
     );
 }
