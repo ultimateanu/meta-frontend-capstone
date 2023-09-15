@@ -27,3 +27,23 @@ describe("Booking form labels present", () => {
     expect(label).toBeInTheDocument();
   });
 });
+
+
+// describe("Reducer functions working", () => {
+//   const { updateTimes, initializeTimes } = require('./components/Main.js');
+
+//   test('Reducer gives limited times on weekdays', () => {
+//     const expected = ["6:00pm", "7:00pm", "8:00pm", "9:00pm"];
+//     expect(updateTimes(0, "2023-09-14")).toEqual(expected);
+//   });
+
+//   test('Reducer gives extended times on Friday', () => {
+//     const expected = ["5:00pm", "6:00pm", "7:00pm", "8:00pm", "9:00pm", "10:00pm", "11:00pm"];
+//     expect(updateTimes(0, "2023-09-15")).toEqual(expected);
+//   });
+
+//   test('Initial times shows times', () => {
+//     const expected = ["6:00pm", "7:00pm", "8:00pm", "9:00pm"];
+//     expect(initializeTimes()).toEqual(expected);
+//   });
+// });
